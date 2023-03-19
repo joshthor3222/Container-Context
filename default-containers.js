@@ -45,7 +45,7 @@ function hijackNewTab(tab) {
         console.log("we hit here get storage");
         console.log(storedItem);
         currentContainer = storedItem.containerid;
-        if(currentContainer != '' && title == 'New Tab') {
+        if(currentContainer != '' && url == 'about:newtab') {
             console.log(tab);
             console.log(currentContainer);
             console.log("tab should be updating");
