@@ -32,8 +32,7 @@
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "jdc-container-context@joshchavez.dev",
-      "strict_min_version": "57.0a1"
+      "id": "jdc-container-context@joshchavez.dev"
     }
   }
 }

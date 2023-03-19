@@ -113,13 +113,26 @@ setPopupTheme();
 function setPopupTheme() {
     let storageItem = browser.storage.sync.get('installedTheme');
     storageItem.then((storedItem) => {
+        console.log("popup theme set");
         let installedtheme = storedItem.installedTheme;
         let framecolor = getColorString(installedtheme.colors.frame);
         let bookmarktext = getColorString(installedtheme.colors.bookmark_text);
         let buttonbackgroundactive = getColorString(installedtheme.colors.button_background_active);
         let buttonbackgroundhover = getColorString(installedtheme.colors.button_background_hover);
 
+        if(buttonbackgroundactive == null) {
+            buttonbackgroundactive = "#1c1b22";
+        }
+        if(buttonbackgroundhover == null) {
+            buttonbackgroundhover = "#484854";
+        }
+        if(bookmarktext == null) {
+            bookmarktext = "#ffffff";
+        }
 
+        console.log(buttonbackgroundactive);
+        console.log(buttonbackgroundhover);
+        console.log(bookmarktext);
         //create style element
         var style = document.createElement("style");
         //set body background in our style element to be framecolor
